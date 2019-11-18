@@ -1,4 +1,11 @@
-<div>
-  <div>Control Value Accessor Exercise</div>
-  <app-yes-no></app-yes-no>
+<div class="flex-container flex-column flex-center">
+  <h1>Control Value Accessor Exercise</h1>
+  <img src="../assets/images/loc-logo.png" alt="loc-image" height="80px" width="300px">
+  <form [formGroup]="mainForm">
+    <h3 style="text-align: center;">Are You A Happy Camper</h3>
+    <app-yes-no formControlName="camper"></app-yes-no>
+
+    <h3>Are you in Whatever USA</h3>
+    <app-yes-no notes="true" formControlName="whatever"></app-yes-no>
+  </form>
 </div>

@@ -1,5 +1,9 @@
-<mat-radio-group type="radio" name="top" [value]="true" color="warn">
-  <mat-radio-button type="radio" name="value" [value]="false"></mat-radio-button>>
-
-  </mat-radio-button>
-</mat-radio-group>
+<form [formGroup]="yesNoForm">
+  <mat-radio-group formControlName="value" aria-label="Select an option">
+    <mat-radio-button style="margin-right: 20px;" [value]="true">Yes</mat-radio-button>
+    <mat-radio-button [value]="false">No</mat-radio-button>
+  </mat-radio-group>
+  <div class="addNote" *ngIf="notes && yesNoForm.value.value">
+    <input type="text" placeholder="Add Note" formControlName="notes">
+  </div>
+</form>
